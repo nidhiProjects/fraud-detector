@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import "tailwindcss";
+@theme {
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+}
+.button-container {
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+}
+.my-button {
+  position: relative;
+  background: linear-gradient(to right, #2e3cbf, #0d1228);
+  color: white;
+  font-size: 1.2rem;
+  border: 2px solid white;
+  border-radius: 12px;
+  z-index: 1;
+  box-shadow: 0 0 8px #1e90ff;
+  cursor: pointer;
+}
+.button-container::before,
+.corner-tl {
+  content: "";
+  position: absolute;
+  top: 14.5px;
+  left: 14.5px;
+  width: 70px;
+  height: 30px;
+  border: 3px solid #0037c4;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background: white;
+  box-shadow: -1px 1px 13px 4px #083c9f;
+  z-index: 0;
+}
+.button-container::before,
+.corner-tr {
+  content: "";
+  position: absolute;
+  top: 14.5px;
+  right: 14.5px;
+  width: 70px;
+  height: 30px;
+  border: 3px solid #0037c4;
+  border-top-right-radius: 13px;
+  border-top-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: white;
+  box-shadow: 1px -1px 13px 1px #083c9f;
+  z-index: 0;
+}
+.button-container::before,
+.corner-br {
+  content: "";
+  position: absolute;
+  bottom: 14.5px;
+  right: 14.5px;
+  width: 70px;
+  height: 30px;
+  border: 3px solid #0037c4;
+  border-bottom-right-radius: 13px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background: white;
+  box-shadow: 2px 2px 13px 1px #083c9f;
+  z-index: 0;
+}
+.button-container::before,
+.corner-bl {
+  content: "";
+  position: absolute;
+  bottom: 14.5px;
+  left: 14.5px;
+  width: 70px;
+  height: 30px;
+  border: 3px solid #0037c4;
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 8px;
+  background: white;
+  box-shadow: -2px 2px 13px 1px #083c9f;
+  z-index: 0;
+}
+.slick-slide > div {
+  transition: all 0.4s ease;
+  transform: scale(0.8);
+  opacity: 0.5;
+  z-index: 1;
+}
+.slick-center > div {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 10;
+}
+.slick-center > div > div > .wrong {
+  box-shadow: -1px 1px 126px 8px red !important;
+  -webkit-box-shadow: -1px 1px 126px 8px red !important;
+  -moz-box-shadow: -1px 1px 126px 8px red !important;
+}
+.slick-center > div > div > .correct {
+   box-shadow: -1px 1px 126px 8px green !important;
+  -webkit-box-shadow: -1px 1px 126px 8px green !important;
+  -moz-box-shadow: -1px 1px 126px 8px green !important;
+  
+}
+.carousel-item {
+  height: 300px;
+  width: 200px;
+  background-color: #1e90ff;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+.slick-list {
+  perspective: 1200px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
